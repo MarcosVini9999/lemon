@@ -65,6 +65,8 @@ p {
     background-image: url("../images/icon-contact-close.svg");
     background-repeat: no-repeat;
     background-color: #2ccb69;
+    transition: all 0.3s ease-out;
+    border: none;
   }
 
   .jl-contact-info {
@@ -75,12 +77,59 @@ p {
     bottom: 11.5rem;
     right: 6.5rem;
     z-index: 200;
+    display: none;
+  }
+
+  .jl-contact-info-inner {
+    display: table;
+    width: 100%;
+    float: right;
+  }
+
+  .jl-contact-info-inner p {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
   }
 
   .jl-social-links {
     width: 100%;
     height: 4.5rem;
     display: block;
+    position: relative;
+    left: -1.2rem;
+    margin-top: 0.7rem;
+  }
+
+  .jl-social {
+    width: 4.5rem;
+    height: 4.5rem;
+    display: inline-block;
+  }
+
+  .jl-social > img {
+    width: 2rem;
+    height: auto;
+    display: block;
+    margin: 1.3rem auto 0;
+  }
+
+  .jl-corner {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    float: right;
+    display: relative;
+  }
+
+  .jl-corner:after {
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    position: absolute;
+    bottom: -2.5rem;
+    right: -0.06rem;
+    background: transparent url("../images/corner.svg") no-repeat;
   }
 }
 
@@ -182,4 +231,14 @@ p {
 
 .jl-bg-black {
   background-color: #000;
+}
+
+/* BEHAVIOR CLASSES */
+
+.jl-is-open {
+  display: block;
+}
+
+.jl-change-icon {
+  background-position-y: -4.5rem;
 }
